@@ -1,0 +1,76 @@
+<script>
+var Datalista = new Array()
+
+var Temprekordhögoutput
+var Humrekordhögoutput
+var Temprekordlågoutput
+var Humrekordlågoutput
+
+Datalista[1] = 12212010
+Datalista[2] = 12222321
+Datalista[3] = 12235323
+Datalista[4] = 12243121
+Datalista[5] = 12256040
+Datalista[6] = 12263332
+Datalista[7] = 12274236
+Datalista[8] = 12286040
+Datalista[9] = 12312032
+Datalista[10] = 12322432
+Datalista[11] = 12335312
+Datalista[12] = 12346423
+Datalista[13] = 12352434
+Datalista[14] = 12364540
+Datalista[15] = 12372324
+Datalista[16] = 12386029
+Datalista[17] = 12415223
+Datalista[18] = 12426012
+Datalista[19] = 12432040
+Datalista[20] = 12445220
+Datalista[21] = 12454110
+Datalista[22] = 12464115
+Datalista[23] = 12476023
+Datalista[24] = 12482439
+Datalista[25] = 12516319
+Datalista[26] = 12523424
+Datalista[27] = 12532031
+Datalista[28] = 12545321
+Datalista[29] = 12555514
+Datalista[30] = 12565740
+Datalista[31] = 12576012
+Datalista[32] = 12583525
+
+alert(Datalista.length)
+
+for (let i = Datalista.length; i > 0; i--) {
+//temp:
+x = (((((Datalista[i]) % 10000) - ((Datalista[i]) % 100))/100) < Temprekordlågoutput)
+alert(x)
+//alert(Datalista[i])
+    if(((((Datalista[i]) % 10000) - ((Datalista[i]) % 100))/100) < Temprekordlågoutput) {
+        alert("hi")
+        Temprekordlågoutput = (((Datalista[i]) % 10000) - ((Datalista[i]) % 100))/100
+    }
+    
+    if(((((Datalista[i]) % 10000) - ((Datalista[i]) % 100))/100) > Temprekordhögoutput) {
+        Temprekordhögoutput = (((Datalista[i]) % 10000) - ((Datalista[i]) % 100))/100
+    }
+    
+
+//hum:
+    if(((((Datalista[i]) % 100) - ((Datalista[i]) % 1))/1) < Humrekordlågoutput) {
+        Humrekordlågoutput = (((Datalista[i]) % 100) - ((Datalista[i]) % 1))/1
+    }
+   
+    if(((((Datalista[i]) % 100) - ((Datalista[i]) % 1))/1) > Humrekordhögoutput){
+        Humrekordhögoutput = (((Datalista[i]) % 100) - ((Datalista[i]) % 1))/1
+}
+}
+
+alert(Temprekordhögoutput)
+alert(Humrekordhögoutput)
+alert(Temprekordlågoutput)
+alert(Humrekordlågoutput)
+
+
+
+</script>
